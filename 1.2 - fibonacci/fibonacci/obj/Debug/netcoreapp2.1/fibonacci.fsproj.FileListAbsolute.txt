@@ -1,10 +1,10 @@
-c:\users\ханя\source\repos\fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.deps.json
-c:\users\ханя\source\repos\fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.runtimeconfig.json
-c:\users\ханя\source\repos\fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.runtimeconfig.dev.json
-c:\users\ханя\source\repos\fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.dll
-c:\users\ханя\source\repos\fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.pdb
-c:\users\ханя\source\repos\fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.fsprojAssemblyReference.cache
-c:\users\ханя\source\repos\fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.AssemblyInfoInputs.cache
-c:\users\ханя\source\repos\fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.AssemblyInfo.fs
-c:\users\ханя\source\repos\fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.dll
-c:\users\ханя\source\repos\fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.pdb
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.deps.json
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.runtimeconfig.json
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.runtimeconfig.dev.json
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.dll
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\bin\Debug\netcoreapp2.1\fibonacci.pdb
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.fsprojAssemblyReference.cache
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.AssemblyInfoInputs.cache
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.AssemblyInfo.fs
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.dll
+C:\Users\Ханя\Desktop\homework-4sem\1.2 - fibonacci\fibonacci\obj\Debug\netcoreapp2.1\fibonacci.pdb

@@ -796,11 +796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\ханя\\source\\repos\\fibonacci\\fibonacci\\fibonacci.fsproj",
+      "projectUniqueName": "C:\\Users\\Ханя\\Desktop\\homework-4sem\\1.2 - fibonacci\\fibonacci\\fibonacci.fsproj",
       "projectName": "fibonacci",
-      "projectPath": "c:\\users\\ханя\\source\\repos\\fibonacci\\fibonacci\\fibonacci.fsproj",
+      "projectPath": "C:\\Users\\Ханя\\Desktop\\homework-4sem\\1.2 - fibonacci\\fibonacci\\fibonacci.fsproj",
       "packagesPath": "C:\\Users\\Ханя\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\ханя\\source\\repos\\fibonacci\\fibonacci\\obj\\",
+      "outputPath": "C:\\Users\\Ханя\\Desktop\\homework-4sem\\1.2 - fibonacci\\fibonacci\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
