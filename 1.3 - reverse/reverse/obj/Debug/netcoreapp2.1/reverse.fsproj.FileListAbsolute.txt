@@ -1,0 +1,10 @@
+C:\Users\Ханя\Desktop\f#\reverse\reverse\bin\Debug\netcoreapp2.1\reverse.deps.json
+C:\Users\Ханя\Desktop\f#\reverse\reverse\bin\Debug\netcoreapp2.1\reverse.runtimeconfig.json
+C:\Users\Ханя\Desktop\f#\reverse\reverse\bin\Debug\netcoreapp2.1\reverse.runtimeconfig.dev.json
+C:\Users\Ханя\Desktop\f#\reverse\reverse\bin\Debug\netcoreapp2.1\reverse.dll
+C:\Users\Ханя\Desktop\f#\reverse\reverse\bin\Debug\netcoreapp2.1\reverse.pdb
+C:\Users\Ханя\Desktop\f#\reverse\reverse\obj\Debug\netcoreapp2.1\reverse.fsprojAssemblyReference.cache
+C:\Users\Ханя\Desktop\f#\reverse\reverse\obj\Debug\netcoreapp2.1\reverse.AssemblyInfoInputs.cache
+C:\Users\Ханя\Desktop\f#\reverse\reverse\obj\Debug\netcoreapp2.1\reverse.AssemblyInfo.fs
+C:\Users\Ханя\Desktop\f#\reverse\reverse\obj\Debug\netcoreapp2.1\reverse.dll
+C:\Users\Ханя\Desktop\f#\reverse\reverse\obj\Debug\netcoreapp2.1\reverse.pdb
