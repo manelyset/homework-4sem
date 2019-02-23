@@ -1,0 +1,10 @@
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\bin\Debug\netcoreapp2.1\FindFirst.deps.json
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\bin\Debug\netcoreapp2.1\FindFirst.runtimeconfig.json
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\bin\Debug\netcoreapp2.1\FindFirst.runtimeconfig.dev.json
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\bin\Debug\netcoreapp2.1\FindFirst.dll
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\bin\Debug\netcoreapp2.1\FindFirst.pdb
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\obj\Debug\netcoreapp2.1\FindFirst.fsprojAssemblyReference.cache
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\obj\Debug\netcoreapp2.1\FindFirst.AssemblyInfoInputs.cache
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\obj\Debug\netcoreapp2.1\FindFirst.AssemblyInfo.fs
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\obj\Debug\netcoreapp2.1\FindFirst.dll
+C:\Users\Ханя\Desktop\homework-4sem\FindFirst\FindFirst\obj\Debug\netcoreapp2.1\FindFirst.pdb
