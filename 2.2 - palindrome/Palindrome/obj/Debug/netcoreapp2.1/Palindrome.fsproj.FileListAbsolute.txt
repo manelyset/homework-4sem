@@ -1,9 +1,0 @@
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\bin\Debug\netcoreapp2.1\Palindrome.deps.json
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\bin\Debug\netcoreapp2.1\Palindrome.runtimeconfig.json
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\bin\Debug\netcoreapp2.1\Palindrome.runtimeconfig.dev.json
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\bin\Debug\netcoreapp2.1\Palindrome.dll
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\bin\Debug\netcoreapp2.1\Palindrome.pdb
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\obj\Debug\netcoreapp2.1\Palindrome.AssemblyInfoInputs.cache
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\obj\Debug\netcoreapp2.1\Palindrome.AssemblyInfo.fs
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\obj\Debug\netcoreapp2.1\Palindrome.dll
-C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome\obj\Debug\netcoreapp2.1\Palindrome.pdb
