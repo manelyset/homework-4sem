@@ -1,0 +1,16 @@
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort Test.deps.json
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort Test.runtimeconfig.json
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort Test.runtimeconfig.dev.json
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort Test.dll
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.fsprojAssemblyReference.cache
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.AssemblyInfoInputs.cache
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.AssemblyInfo.fs
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort Test.pdb
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort.dll
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\bin\Debug\netcoreapp2.1\MergeSort.pdb
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.fsproj.CopyComplete
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.dll
+C:\Users\Ханя\Desktop\homework-4sem\MergeSort Test\obj\Debug\netcoreapp2.1\MergeSort Test.pdb

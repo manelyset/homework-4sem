@@ -1,0 +1,16 @@
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome Test.deps.json
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome Test.runtimeconfig.json
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome Test.runtimeconfig.dev.json
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome Test.dll
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome Test.pdb
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome.dll
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\bin\Debug\netcoreapp2.1\Palindrome.pdb
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.fsprojAssemblyReference.cache
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.AssemblyInfoInputs.cache
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.AssemblyInfo.fs
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.fsproj.CopyComplete
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.dll
+C:\Users\Ханя\Desktop\homework-4sem\2.2 - palindrome\Palindrome Test\obj\Debug\netcoreapp2.1\Palindrome Test.pdb
