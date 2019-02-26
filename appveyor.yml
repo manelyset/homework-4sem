@@ -10,4 +10,4 @@ test:
   assemblies:
     - '**\*Test.dll'
 test_script:
-  - nunit3-console '2.1 - findFirst\FindFirst Test\bin\Debug\netcoreapp2.1\FindFirst Test.dll' --result=myresults.xml;format=AppVeyor
+  - nunit3-console "2.1 - findFirst\FindFirst Test\bin\Debug\netcoreapp2.1\FindFirst Test.dll" --result=myresults.xml;format=AppVeyor
