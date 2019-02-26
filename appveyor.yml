@@ -9,3 +9,5 @@ build:
 test:
   assemblies:
     - '**\*Test.dll'
+test_script:
+  - nunit3-console '**\*Test.dll' --result=myresults.xml;format=AppVeyor
