@@ -5,3 +5,7 @@ before_build:
 
 build: 
     project: "2.1 - findFirst/FindFirst.sln"
+
+test:
+  assemblies:
+    - '**\*Test.dll'
