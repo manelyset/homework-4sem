@@ -6,8 +6,5 @@ before_build:
 build: 
     project: "2.1 - findFirst/FindFirst.sln"
 
-test:
-  assemblies:
-    - '**\*Test.dll'
-test_script:
-  - nunit3-console "2.1 - findFirst\FindFirst Test\bin\Debug\netcoreapp2.1\FindFirst Test.dll" --result=myresults.xml;format=AppVeyor
+test_script: 
+    - dotnet test "2.1 - findFirst/FindFirst.sln"
