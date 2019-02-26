@@ -1,12 +1,7 @@
 image: Visual Studio 2017 
 
-branches: 
-only: 
-- find-first
-
 before_build: 
-- nuget restore "2.1 - findFirst/FindFirst.sln"
-
+    - nuget restore "2.1 - findFirst/FindFirst.sln"
 
 build: 
-project: "2.1 - findFirst/FindFirst.sln"
+    project: "2.1 - findFirst/FindFirst.sln"
