@@ -12,7 +12,7 @@ let ``increment all elements``() =
 [<Test>]
 let ``square all elements``() =
     mapTree (fun x -> x * x) (Tree(1.0, Tree(-2.0, Tree(4.5, Tip, Tip), Tip), Tree(-3.0, Tree(5.1, Tip, Tip), Tree(6.0, Tip, Tip)))) |> 
-    should equal (Tree(1.0, Tree(4.0, Tree(20.25, Tip, Tip), Tip), Tree(9.0, Tree(26.01, Tip, Tip), Tree(36.0, Tip, Tip))))
+    should equal (Tree(1.0,Tree(4.0,Tree(20.25,Tip,Tip),Tip), Tree(9.0,Tree(26.01,Tip,Tip),Tree(36.0,Tip,Tip))))
 
 [<Test>]
 let ``convert to strings``() =
