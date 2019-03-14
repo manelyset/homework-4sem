@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PairNumbers", "PairNumbers\PairNumbers.fsproj", "{E87182BD-939C-4807-975B-21BD7A46C131}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PairNumbersTest", "PairNumbersTest\PairNumbersTest.fsproj", "{2C50C994-E22A-4109-8C32-329F4A12D7DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E87182BD-939C-4807-975B-21BD7A46C131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87182BD-939C-4807-975B-21BD7A46C131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87182BD-939C-4807-975B-21BD7A46C131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87182BD-939C-4807-975B-21BD7A46C131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C50C994-E22A-4109-8C32-329F4A12D7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C50C994-E22A-4109-8C32-329F4A12D7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C50C994-E22A-4109-8C32-329F4A12D7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C50C994-E22A-4109-8C32-329F4A12D7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14D07149-3DE6-4161-9000-6764165676A6}
+	EndGlobalSection
+EndGlobal
