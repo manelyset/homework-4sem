@@ -1,0 +1,10 @@
+image: Visual Studio 2017 
+
+before_build: 
+    - nuget restore "5.2-pointFree/PointFree.sln"
+
+build: 
+    project: "5.2-pointFree/PointFree.sln"
+
+test_script: 
+    - dotnet test "5.2-pointFree/PointFree.sln"
