@@ -22,8 +22,6 @@ let rec mergeSort ls =
         let (ls1, ls2) = split ls
         let sorted1 = mergeSort ls1
         let sorted2 = mergeSort ls2
-<<<<<<< HEAD
         merge (List.rev sorted1) (List.rev sorted2)
-=======
-        merge (List.rev sorted1) (List.rev sorted2)
->>>>>>> 8567f22e371b082d4d377cb7f68b8a877886f320
+        
+        
