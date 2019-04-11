@@ -5,11 +5,7 @@ open System.IO
 open System.Runtime.Serialization.Formatters.Binary
 open System
 
-let addNumber phonebook = 
-    printfn "Enter name: "
-    let newName = Console.ReadLine()
-    printfn "Enter number: "
-    let newNumber = Console.ReadLine()
+let addNumber newName newNumber phonebook = 
     (newName, newNumber)::phonebook
 
 let rec findNumber name phonebook =
@@ -63,7 +59,12 @@ let main args =
         let command = Console.ReadLine()
         match command with
         | "1" -> printfn "Exit success!"
-        | "2" -> mainLoop (addNumber phonebook)
+        | "2" ->
+            printfn "Enter name: "
+            let newName = Console.ReadLine()
+            printfn "Enter number: "
+            let newNumber = Console.ReadLine()
+            mainLoop (addNumber newName newNumber phonebook)
         | "3" -> 
             printfn "Enter name: "
             let name = Console.ReadLine()
