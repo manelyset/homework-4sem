@@ -1,4 +1,4 @@
-module Tests
+module MergeSortTests
 
 open NUnit.Framework
 open FsUnit
@@ -6,15 +6,15 @@ open MergeSort
 
 [<Test>]
 let ``[5; 3; 1] and [6; 4; 2] should be merged into [1; 2; 3; 4; 5; 6]`` () =
-    merge ([5; 3; 1], [6; 4; 2]) |> should equal [1; 2; 3; 4; 5; 6]
+    merge [5; 3; 1] [6; 4; 2] |> should equal [1; 2; 3; 4; 5; 6]
 
 [<Test>]
 let ``[3; 2; 1] and [6; 5; 4] should be merged into [1; 2; 3; 4; 5; 6]`` () =
-    merge ([3; 2; 1], [6; 5; 4]) |> should equal [1; 2; 3; 4; 5; 6]
+    merge [3; 2; 1] [6; 5; 4] |> should equal [1; 2; 3; 4; 5; 6]
 
 [<Test>]
 let ``[10; 7; 1] and [25; 20; 15; 10] should be merged into [1; 7; 10; 10; 15; 20; 25]`` () =
-    merge ([10; 7; 1], [25; 20; 15; 10]) |> should equal [1; 7; 10; 10; 15; 20; 25]
+    merge [10; 7; 1] [25; 20; 15; 10] |> should equal [1; 7; 10; 10; 15; 20; 25]
 
 [<Test>]
 let ``[1; 2; 3; 4] should be splitted into [2; 1] and [3; 4]`` () =
