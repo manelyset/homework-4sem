@@ -2,6 +2,8 @@
 
 open FsRandom
 
+let state = createState xorshift (123456789u, 362436069u, 521288629u, 88675123u)
+
 type Computer (OSType:string, infected:bool) =
     let mutable mInfected = infected
     member this.Infected
@@ -15,7 +17,6 @@ type Computer (OSType:string, infected:bool) =
         | _ -> 1.0
     member this.infect (otherComputer:Computer) =
         if infected then
-            let r = ``[0, 1)``
-            otherComputer.Infected <- (r < otherComputer.infProbability)
+            otherComputer.Infected <- (Random.get ``[0, 1)`` state < otherComputer.infProbability)
             
     
