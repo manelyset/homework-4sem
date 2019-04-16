@@ -4,6 +4,10 @@ open System
 
 type Computer (OSType:string, infected:bool, r:Random) =
     let mutable mInfected = infected
+    let mutable mFlag = 1
+    member this.Flag
+        with get () = mFlag
+        and set newFlag = mFlag <- newFlag
     member this.Infected
         with get () = mInfected
         and set infection = mInfected <- infection
@@ -18,23 +22,25 @@ type Computer (OSType:string, infected:bool, r:Random) =
             otherComputer.Infected <- (r.NextDouble() < otherComputer.infProbability)
   
 
-let infect (network:Array) (computersList:Array) =
-    for i in 0..(network.GetLength 1) do
-        for j in 0..(network.GetLength 2) do
-            if (network.[i].[j]) = 1 then
+let infect (network:int[][]) (computersList:Computer[]) =
+    for i in 0..((Array.length computersList) - 1) do
+        for j in 0..((Array.length computersList) - 1) do
+            if (network.[i].[j] = 1) && (computersList.[i].Flag = 2) then
                 computersList.[i].infect(computersList.[j])
+    for c in computersList do
+        if c.Infected then c.Flag <- 2
 
-let networkState (computersList:Array) =
-    Array.init (computersList.GetLength 1) (fun i -> computersList.[i].Infected)
+let networkState (computersList:Computer[]) =
+    Array.init (Array.length computersList) (fun i -> computersList.[i].Infected)
             
-let printNetworkState (computersList:Array) =
-    for i in 0..(computersList.GetLength 1) do
+let printNetworkState (computersList:Computer[]) =
+    for i in 0..((Array.length computersList) - 1) do
         match computersList.[i].Infected with
         | true -> printfn ("Computer %i: infected") i
         | false -> printfn ("Computer %i: not infected") i
     
-let printStepByStep steps (network:Array) (computersList:Array)= 
-    let rec iterateStepByStep steps (network:Array) (computersList:Array) i =
+let printStepByStep steps (network:int[][]) (computersList:Computer[])= 
+    let rec iterateStepByStep steps (network:int[][]) (computersList:Computer[]) i =
         match i with
         | a when a = steps -> 
             printfn "STEP %i" i
