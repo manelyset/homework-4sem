@@ -5,9 +5,21 @@ open System.IO
 open System.Runtime.Serialization.Formatters.Binary
 open System
 
+/// <summary>
+/// Adds a new recording to the list
+/// </summary>
+/// <param name="newName">The new person's name</param>
+/// <param name="newNumber">The new person's number</param>
+/// <param name="phonebook">The list of phones</param>
 let addNumber newName newNumber phonebook = 
     (newName, newNumber)::phonebook
 
+/// <summary>
+/// Finds a number of person with a given name
+/// </summary>
+/// <param name="name">The name of person</param>
+/// <param name="phonebook">The list of phones</param>
+/// <returns>The number if there is a person with the given name, the string "There is no person having this name!" otherwise</returns>
 let rec findNumber name phonebook =
     match phonebook with
     | (name1, number1)::t ->
@@ -15,6 +27,12 @@ let rec findNumber name phonebook =
         else findNumber name t
     | [] -> "There is no person having this name!"
 
+/// <summary>
+/// Finds a name of person with a given number
+/// </summary>
+/// <param name="number">The number of person</param>
+/// <param name="phonebook">The list of phones</param>
+/// <returns>The name if there is a person with the given number, the string "There is no person having this number!" otherwise</returns>
 let rec findName number phonebook =
     match phonebook with
     | (name1, number1)::t ->
@@ -22,11 +40,20 @@ let rec findName number phonebook =
         else findName number t
     | [] -> "There is no person having this number!"
 
+/// <summary>
+/// Prints a phonebook to the console
+/// </summary>
+/// <param name="phonebook">A list of phones to print</param>
 let rec printBook phonebook =
     if phonebook<>[] then
         printfn "%s\t%s" (fst (List.head phonebook)) (snd (List.head phonebook))
         printBook (List.tail phonebook)
 
+/// <summary>
+/// Writes a phonebook to the binary file with a given name
+/// </summary>
+/// <param name="fileName">The name of binary file</param>
+/// <param name="phonebook">The list of phones</param>
 let writeToFile fileName phonebook = 
     let writeValue outputStream x =
         let formatter = new BinaryFormatter()
@@ -34,7 +61,11 @@ let writeToFile fileName phonebook =
     let fsOut = new FileStream(fileName, FileMode.Create)
     writeValue fsOut phonebook
     fsOut.Close()
-
+/// <summary>
+/// Reads a phonebook from the binary file
+/// </summary>
+/// <param name="fileName">The name of file</param>
+/// <returns>The new list of phones read from file</returns>
 let readFromFile fileName = 
     let readValue inputStream =
         let formatter = new BinaryFormatter()
@@ -45,6 +76,9 @@ let readFromFile fileName =
     fsIn.Close()
     res
 
+/// <summary>
+/// The interactive loop to execute at the console
+/// </summary>
 [<EntryPoint>]
 let main args =
     let rec mainLoop phonebook =

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Phones", "Phones\Phones.fsproj", "{A626573B-D354-41B8-A814-40BF3A18CCCF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PhonesTests", "PhonesTests\PhonesTests.fsproj", "{D491EA40-EFE6-45D8-8008-73E11B3C11BD}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "PhonesTests", "PhonesTests\PhonesTests.fsproj", "{D491EA40-EFE6-45D8-8008-73E11B3C11BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
