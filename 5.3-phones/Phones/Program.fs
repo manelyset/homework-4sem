@@ -19,7 +19,7 @@ let rec findName number phonebook =
     match phonebook with
     | (name1, number1)::t ->
         if number1 = number then name1
-        else findNumber number t
+        else findName number t
     | [] -> "There is no person having this number!"
 
 let rec printBook phonebook =
