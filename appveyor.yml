@@ -1,0 +1,10 @@
+image: Visual Studio 2017 
+
+before_build: 
+    - nuget restore "6-network.sln"
+
+build: 
+    project: "6-network.sln"
+
+test_script: 
+    - dotnet test "6-network.sln"
