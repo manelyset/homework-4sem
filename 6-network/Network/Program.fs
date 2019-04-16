@@ -18,8 +18,9 @@ type Computer (OSType:string, infected:bool, r:Random) =
         | "Linux" -> 0.6
         | _ -> 1.0
     member this.infect (otherComputer:Computer) =
-        if infected then
-            otherComputer.Infected <- (r.NextDouble() < otherComputer.infProbability)
+        if this.Infected then
+            if (r.NextDouble() < otherComputer.infProbability) then
+                otherComputer.Infected <- true
   
 
 let infect (network:int[][]) (computersList:Computer[]) =

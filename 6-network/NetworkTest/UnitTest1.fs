@@ -7,11 +7,11 @@ open Network
 
 type neverInfect() =
     inherit Random()
-    member this.NextDouble = 1.0
+    override this.NextDouble() = 1.0
 
 type alwaysInfect() =
     inherit Random()
-    member this.NextDouble = 0.0
+    override this.NextDouble() = 0.0
 
 let neverInfect = neverInfect()
 let alwaysInfect = alwaysInfect()
