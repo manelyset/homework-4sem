@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Rounding", "Rounding\Rounding.fsproj", "{0C20F9E0-89FA-4238-8B35-E25BA68404BB}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RoundingTests", "RoundingTests\RoundingTests.fsproj", "{439BB9BE-8E7C-4800-A6C5-D5C273BCA21F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C20F9E0-89FA-4238-8B35-E25BA68404BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C20F9E0-89FA-4238-8B35-E25BA68404BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C20F9E0-89FA-4238-8B35-E25BA68404BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C20F9E0-89FA-4238-8B35-E25BA68404BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439BB9BE-8E7C-4800-A6C5-D5C273BCA21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439BB9BE-8E7C-4800-A6C5-D5C273BCA21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439BB9BE-8E7C-4800-A6C5-D5C273BCA21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439BB9BE-8E7C-4800-A6C5-D5C273BCA21F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {930F0101-5345-4441-807B-4172EF77143F}
+	EndGlobalSection
+EndGlobal
