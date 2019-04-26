@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Test1.2-palindrome", "Test1.2-palindrome\Test1.2-palindrome.fsproj", "{6F850EF6-6216-45BE-BF64-14D2E0A90EC8}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Test1.2-palindrome", "test1.2\Test1.2-palindrome\Test1.2-palindrome.fsproj", "{6F850EF6-6216-45BE-BF64-14D2E0A90EC8}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PalindromeTest", "PalindromeTest\PalindromeTest.fsproj", "{6FDFFB36-920C-48FA-9774-30B32C419623}"
 EndProject
