@@ -1,17 +1,44 @@
 ﻿module Auto
 
+/// <summary>
+/// The class representing an automobile in the car showroom
+/// </summary>
 type Auto (price:int, mark:string, forSale:bool) =
+    /// <summary>
+    /// The automobile price (thousands of roubles)
+    /// </summary>
     member this.Price = price
+    /// <summary>
+    /// The automobile mark
+    /// </summary>
     member this.Mark = mark
+    /// <summary>
+    /// Tells whether an automobile is for sale or not
+    /// </summary>
     member this.ForSale = forSale
 
+/// <summary>
+/// The class representing a car, inherits Auto
+/// </summary>
 type Car (price:int, mark:string, model:string, color:string, forSale:bool) =
     inherit Auto(price, mark, forSale)
+    /// <summary>
+    /// The car model
+    /// </summary>
     member this.Model = model
+    /// <summary>
+    /// The car color
+    /// </summary>
     member this.Color = color
 
+/// <summary>
+/// The class representing a truck, inherits Auto
+/// </summary>
 type Truck (price:int, mark:string, weight:int, forSale:bool) =
     inherit Auto(price, mark, forSale)
+    /// <summary>
+    /// The truck weight (in Kgs)
+    /// </summary>
     member this.Weight = weight
 
 /// <summary>
