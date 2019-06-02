@@ -2,6 +2,7 @@ module Tests
 
 open NUnit.Framework
 open FsUnit
+open FsCheck
 open PairNumbers
 
 [<Test>]
@@ -51,3 +52,9 @@ let ``f3: There are 4 pair numbers in [4; 40; 22; 16]`` () =
 [<Test>]
 let ``f3: There is no pair numbers in [7; 3; 11; 1]`` () =
     pairNumbers3 [7; 3; 11; 1] |> should equal 0
+
+[<Test>]
+let ``all functions return the same result`` () =
+    Check.Quick (fun ls -> (pairNumbers1 ls) = (pairNumbers2 ls))
+    Check.Quick (fun ls -> (pairNumbers1 ls) = (pairNumbers3 ls))
+    Check.Quick (fun ls -> (pairNumbers3 ls) = (pairNumbers2 ls))
