@@ -5,6 +5,6 @@ open FsUnit
 open Downloader
 
 [<Test>]
-let ``hwproj.me contains 18 links`` () =
-    let pages = pagesDownloader "hwproj.me"
-    pages.Length |> should equal 18
+let ``spbu.ru contains 217 links`` () =
+    let pages = pagesDownloader "spbu.ru"
+    pages.Length |> should equal 217
