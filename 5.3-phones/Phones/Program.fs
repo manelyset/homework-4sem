@@ -12,7 +12,7 @@ open System
 /// <param name="newNumber">The new person's number</param>
 /// <param name="phonebook">The list of phones</param>
 let addNumber newName newNumber phonebook = 
-    (newName, newNumber)::phonebook
+    (newName, newNumber) :: phonebook
 
 /// <summary>
 /// Finds a number of person with a given name
@@ -22,7 +22,7 @@ let addNumber newName newNumber phonebook =
 /// <returns>The number if there is a person with the given name, the string "There is no person having this name!" otherwise</returns>
 let rec findNumber name phonebook =
     match phonebook with
-    | (name1, number1)::t ->
+    | (name1, number1) :: t ->
         if name1 = name then number1
         else findNumber name t
     | [] -> "There is no person having this name!"
@@ -35,7 +35,7 @@ let rec findNumber name phonebook =
 /// <returns>The name if there is a person with the given number, the string "There is no person having this number!" otherwise</returns>
 let rec findName number phonebook =
     match phonebook with
-    | (name1, number1)::t ->
+    | (name1, number1) :: t ->
         if number1 = number then name1
         else findName number t
     | [] -> "There is no person having this number!"
@@ -45,7 +45,7 @@ let rec findName number phonebook =
 /// </summary>
 /// <param name="phonebook">A list of phones to print</param>
 let rec printBook phonebook =
-    if phonebook<>[] then
+    if phonebook <> [] then
         printfn "%s\t%s" (fst (List.head phonebook)) (snd (List.head phonebook))
         printBook (List.tail phonebook)
 
@@ -58,9 +58,8 @@ let writeToFile fileName phonebook =
     let writeValue outputStream x =
         let formatter = new BinaryFormatter()
         formatter.Serialize(outputStream, box x)
-    let fsOut = new FileStream(fileName, FileMode.Create)
+    use fsOut = new FileStream(fileName, FileMode.Create)
     writeValue fsOut phonebook
-    fsOut.Close()
 /// <summary>
 /// Reads a phonebook from the binary file
 /// </summary>
@@ -72,7 +71,7 @@ let readFromFile fileName =
         let res = formatter.Deserialize(inputStream)
         unbox res
     let fsIn = new FileStream(fileName, FileMode.Open)
-    let res : (string*string) list = readValue fsIn
+    let res : (string * string) list = readValue fsIn
     fsIn.Close()
     res
 
@@ -82,8 +81,8 @@ let readFromFile fileName =
 [<EntryPoint>]
 let main args =
     let rec mainLoop phonebook =
-        printfn <|
-        "1 - Exit
+        printfn <| "
+        1 - Exit
         2 - Add new recording
         3 - Find a number by name
         4 - Find a name by number
