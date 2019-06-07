@@ -1,0 +1,10 @@
+image: Visual Studio 2017 
+
+before_build: 
+    - nuget restore "3.4-primesseq/PrimesSequence.sln"
+
+build: 
+    project: "3.4-primesseq/PrimesSequence.sln"
+
+test_script: 
+    - dotnet test "3.4-primesseq/PrimesSequence.sln"
