@@ -4,12 +4,6 @@ open NUnit.Framework
 open FsUnit
 open MapTree
 
-let rec treesEqual t1 t2 =
-    match t1, t2 with
-    | Tip, Tip -> true
-    | Tree(x, t3, t4), Tree(y, t5, t6) when x = y -> (treesEqual t3 t5) & (treesEqual t4 t6)
-    | _, _ -> false
-
 [<Test>]
 let ``increment all elements``() =
     mapTree (fun x -> x + 1) (Tree(1, Tree(2, Tip, Tip), Tree(3, Tip, Tip))) |> 
@@ -18,7 +12,7 @@ let ``increment all elements``() =
 [<Test>]
 let ``square all elements``() =
     mapTree (fun x -> x * x) (Tree(1, Tree(-2, Tree(4, Tip, Tip), Tip), Tree(-3, Tree(5, Tip, Tip), Tree(6, Tip, Tip))))
-   |> should equal (Tree(1,Tree(4,Tree(16,Tip,Tip),Tip), Tree(9,Tree(25,Tip,Tip),Tree(36,Tip,Tip))))                
+   |> should equal (Tree(1, Tree(4, Tree(16, Tip, Tip), Tip), Tree(9, Tree(25, Tip, Tip), Tree(36, Tip, Tip))))                
   
 
 [<Test>]
