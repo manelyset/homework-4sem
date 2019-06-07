@@ -11,5 +11,5 @@ type Tree<'a> =
 let rec mapTree f tree =
     match tree with
     | Tip -> Tip
-    | Tree(x, left, right) -> Tree(f(x), mapTree f left, mapTree f right)
+    | Tree(x, left, right) -> Tree(f x, mapTree f left, mapTree f right)
 
