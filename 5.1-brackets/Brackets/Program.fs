@@ -13,11 +13,14 @@ let checkSequence brackets =
         match brackets, stack with 
         | [], Null -> true
         | h :: t, _ when h = '(' || h = '{' || h = '[' -> stackCheck t (Node(h, stack))
-        | h::t, Node (x, next) when h = ')' ->
+        | h :: t, Node (x, next) when h = ')' ->
             if x <> '(' then false
             else stackCheck t next
-        | h :: t, Node (x, next) when h = '}' || h = '[' ->
-            if x <> (h - 2) then false
+        | h :: t, Node (x, next) when h = '}' ->
+            if x <> '{' then false
+            else stackCheck t next
+        | h :: t, Node (x, next) when h = ']' ->
+            if x <> '[' then false
             else stackCheck t next
         | _, _ -> false
     stackCheck (Seq.toList brackets) Null
