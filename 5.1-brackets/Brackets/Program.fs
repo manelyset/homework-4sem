@@ -1,7 +1,7 @@
 ﻿module Brackets
 
 type Stack<'a> =
-   | Node of 'a*Stack<'a>
+   | Node of 'a * Stack<'a>
    | Null
 
 /// <summary>Tests whether the bracket sequence is balanced. 
@@ -12,15 +12,12 @@ let checkSequence brackets =
     let rec stackCheck brackets stack =
         match brackets, stack with 
         | [], Null -> true
-        | h::t, _ when h = '(' || h = '{' || h = '[' -> stackCheck t (Node(h, stack))
+        | h :: t, _ when h = '(' || h = '{' || h = '[' -> stackCheck t (Node(h, stack))
         | h::t, Node (x, next) when h = ')' ->
-            if x<>'(' then false
+            if x <> '(' then false
             else stackCheck t next
-        | h::t, Node (x, next) when h = '}' ->
-            if x<>'{' then false
-            else stackCheck t next
-        | h::t, Node (x, next) when h = ']' ->
-            if x<>'[' then false
+        | h :: t, Node (x, next) when h = '}' || h = '[' ->
+            if x <> (h - 2) then false
             else stackCheck t next
         | _, _ -> false
     stackCheck (Seq.toList brackets) Null
