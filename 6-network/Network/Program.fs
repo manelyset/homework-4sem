@@ -2,24 +2,36 @@
 
 open System
 
+type InfectionFlag = 
+    | CanInfect
+    | CanNotInfect
+
 type Computer (OSType:string, infected:bool, r:Random) =
-    let mutable mInfected = infected
-    let mutable mFlag = 1
+    let mutable infected = infected
+    let mutable mFlag = CanNotInfect
     member this.Flag
         with get () = mFlag
         and set newFlag = mFlag <- newFlag
     member this.Infected
-        with get () = mInfected
-        and set infection = mInfected <- infection
-    member this.infProbability =
+        with get () = infected
+        and set infection = infected <- infection
+    /// <summary>
+    /// The infection probability of the computer depending on its operational system
+    /// </summary>
+    /// <returns>The probability from 0 to 1</returns>
+    member this.InfProbability =
         match OSType with
         | "Windows" -> 0.4
         | "MacOs" -> 0.5
         | "Linux" -> 0.6
         | _ -> 1.0
-    member this.infect (otherComputer:Computer) =
+    /// <summary>
+    /// If the given computer is infected, infects another computer with some probability depending on its operational system
+    /// </summary>
+    /// <param name="otherComputer">The computer to infect</param>
+    member this.Infect (otherComputer:Computer) =
         if this.Infected then
-            if (r.NextDouble() < otherComputer.infProbability) then
+            if (r.NextDouble() < otherComputer.InfProbability) then
                 otherComputer.Infected <- true
   
 /// <summary>
@@ -30,10 +42,10 @@ type Computer (OSType:string, infected:bool, r:Random) =
 let infect (network:int[][]) (computersList:Computer[]) =
     for i in 0..((Array.length computersList) - 1) do
         for j in 0..((Array.length computersList) - 1) do
-            if (network.[i].[j] = 1) && (computersList.[i].Flag = 2) then
-                computersList.[i].infect(computersList.[j])
+            if (network.[i].[j] = 1) && (computersList.[i].Flag = CanInfect) then
+                computersList.[i].Infect(computersList.[j])
     for c in computersList do
-        if c.Infected then c.Flag <- 2
+        if c.Infected then c.Flag <- CanInfect
 /// <summary>
 /// For each computer in the list says whether it is infected or not
 /// </summary>
@@ -67,6 +79,6 @@ let printStepByStep steps (network:int[][]) (computersList:Computer[])=
             printfn "STEP %i" i
             printNetworkState computersList
             infect network computersList
-            iterateStepByStep steps network computersList (i+1)
+            iterateStepByStep steps network computersList (i + 1)
     iterateStepByStep steps network computersList 0
     
