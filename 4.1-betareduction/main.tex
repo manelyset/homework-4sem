@@ -5,8 +5,8 @@
 \begin{document}
 \begin{center}
 \section*{Редукция лямбда-терма}
-$((\lambda a.(\lambda b.b\; b)\; (\lambda b.b\; b))\; b)\; ((\lambda c.(c\; b))\; (\lambda a.a))) \to_\beta \\
-((\lambda a.(\lambda b.b\; b)\; (\lambda b.b\; b)[a := b])\; (\lambda c.(c[c := \lambda a.a]\; b)) = ((\lambda b.b\; b)(\lambda b.b\; b))(\lambda a.a\; b) \to_\beta \\
-((\lambda b.b\; b)(\lambda b.b\; b))(\lambda a.a [a := b]) = \Omega\; b$
+$((\lambda a.(\lambda b.b\; b)\; (\lambda b.b\; b))\; b)\; ((\lambda c.(c\; b))\; (\lambda a.a))) \to_\beta$ \\
+$((\lambda a.(\lambda b.b\; b)\; (\lambda b.b\; b)[a := b])\; (\lambda c.(c[c := \lambda a.a]\; b)) = ((\lambda b.b\; b)(\lambda b.b\; b))(\lambda a.a\; b) \to_\beta$ \\
+$((\lambda b.b\; b)(\lambda b.b\; b))(\lambda a.a [a := b]) = \Omega\; b$
 \end{center}
 \end{document}
