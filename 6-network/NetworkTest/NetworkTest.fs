@@ -24,7 +24,7 @@ network1.[1].[2] <- 1
 network1.[2].[3] <- 1
 network1.[3].[0] <- 1
 computersList1.[2].Infected <- true
-computersList1.[2].Flag <- CanInfect
+computersList1.[2].InfectionAbility <- CanInfect
 
 [<Test>]
 let ``computer #2 should not infect others``() =
@@ -39,7 +39,7 @@ network2.[2].[3] <- 1
 network2.[2].[4] <- 1
 network2.[4].[5] <- 1
 computersList2.[0].Infected <- true
-computersList2.[0].Flag <- CanInfect
+computersList2.[0].InfectionAbility <- CanInfect
 
 [<Test>]
 let ``network #2 - infection`` () =
@@ -52,7 +52,7 @@ let ``network #2 - infection`` () =
 
 let computersList3 = Array.init 6 (fun i -> Computer("otherOS", false, r))
 computersList3.[0].Infected <- true
-computersList3.[0].Flag <- CanInfect
+computersList3.[0].InfectionAbility <- CanInfect
 
 [<Test>]
 let ``network #3 - infection`` () =

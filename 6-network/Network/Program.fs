@@ -2,19 +2,25 @@
 
 open System
 
-type InfectionFlag = 
+type InfectionAbility = 
     | CanInfect
     | CanNotInfect
 
 type Computer (OSType:string, infected:bool, r:Random) =
     let mutable infected = infected
-    let mutable mFlag = CanNotInfect
-    member this.Flag
-        with get () = mFlag
-        and set newFlag = mFlag <- newFlag
+
+    /// <summary>
+    /// Defines whether the computer can infect other computers at the current step
+    /// </summary>
+    member val InfectionAbility = CanNotInfect with get, set
+
+    /// <summary>
+    /// Defines whether the computer is infected or not
+    /// </summary>
     member this.Infected
         with get () = infected
         and set infection = infected <- infection
+
     /// <summary>
     /// The infection probability of the computer depending on its operational system
     /// </summary>
@@ -25,6 +31,7 @@ type Computer (OSType:string, infected:bool, r:Random) =
         | "MacOs" -> 0.5
         | "Linux" -> 0.6
         | _ -> 1.0
+
     /// <summary>
     /// If the given computer is infected, infects another computer with some probability depending on its operational system
     /// </summary>
@@ -42,10 +49,11 @@ type Computer (OSType:string, infected:bool, r:Random) =
 let infect (network:int[][]) (computersList:Computer[]) =
     for i in 0..((Array.length computersList) - 1) do
         for j in 0..((Array.length computersList) - 1) do
-            if (network.[i].[j] = 1) && (computersList.[i].Flag = CanInfect) then
+            if (network.[i].[j] = 1) && (computersList.[i].InfectionAbility = CanInfect) then
                 computersList.[i].Infect(computersList.[j])
     for c in computersList do
-        if c.Infected then c.Flag <- CanInfect
+        if c.Infected then c.InfectionAbility <- CanInfect
+
 /// <summary>
 /// For each computer in the list says whether it is infected or not
 /// </summary>
@@ -63,6 +71,7 @@ let printNetworkState (computersList:Computer[]) =
         match computersList.[i].Infected with
         | true -> printfn ("Computer %i: infected") i
         | false -> printfn ("Computer %i: not infected") i
+
 /// <summary>
 /// Prints how the network state changed in some number of steps
 /// </summary>
