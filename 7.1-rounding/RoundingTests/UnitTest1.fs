@@ -13,7 +13,7 @@ let ``simple calculations``() =
         let! b = 3.5
         return a / b
     }
-    res |> should equal 0.048
+    res |> should (equalWithin 0.0005) 0.048
 
 [<Test>]
 let ``calcultions with zero-rounding``() =
@@ -22,7 +22,7 @@ let ``calcultions with zero-rounding``() =
         let! b = a / 4.0
         return b + 1.3
     }
-    res |> should equal 3.0
+    res |> should (equalWithin 0.05) 3.0
 
 [<Test>]
 let ``calculations with division by zero``() =
