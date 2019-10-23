@@ -32,6 +32,15 @@ type MultiThread<'a> (supplier : unit -> 'a) =
                 Monitor.Exit lockobj
 
 type LockFree<'a> (supplier : unit -> 'a) =
+    let mutable result = None
+    let mutable called = false
+    interface ILazy<'a> with
+        member this.Get() = 
+            if not called then
+                let answer = supplier()
+                Interlocked.CompareExchange(&result, Some answer, result) |> ignore
+                called <- true
+            result.Value
 
 type LazyFactory<'a> (supplier : unit -> 'a) =
     static member CreateSingleThreadedLazy supplier = new SingleThread<'a>(supplier)

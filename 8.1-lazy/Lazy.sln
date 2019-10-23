@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lazy", "Lazy\Lazy.fsproj", "{3F3F0487-53B0-49E5-8360-FDCAA2367FAE}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Lazy", "Lazy\Lazy.fsproj", "{3F3F0487-53B0-49E5-8360-FDCAA2367FAE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LazyTests", "LazyTests\LazyTests.fsproj", "{660B0203-0849-49FC-86C5-DF78CC8E0653}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3F3F0487-53B0-49E5-8360-FDCAA2367FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F3F0487-53B0-49E5-8360-FDCAA2367FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F3F0487-53B0-49E5-8360-FDCAA2367FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{660B0203-0849-49FC-86C5-DF78CC8E0653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{660B0203-0849-49FC-86C5-DF78CC8E0653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{660B0203-0849-49FC-86C5-DF78CC8E0653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{660B0203-0849-49FC-86C5-DF78CC8E0653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
