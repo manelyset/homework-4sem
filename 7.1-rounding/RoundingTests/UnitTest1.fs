@@ -32,3 +32,5 @@ let ``calculations with division by zero``() =
         return b + 1.33
     }
     res |> should equal infinity
+
+
