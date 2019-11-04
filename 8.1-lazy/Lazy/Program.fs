@@ -7,6 +7,7 @@ open System.Threading
 /// An interface for lazy calculator
 /// </summary>
 type ILazy<'a> =
+    /// Calculates a result when called for the first time, returns already calculated result if called again
     abstract member Get: unit -> 'a
 
 /// <summary>
@@ -31,19 +32,17 @@ type SingleThread<'a> (supplier : unit -> 'a) =
 type MultiThread<'a> (supplier : unit -> 'a) =
     let mutable result = None
     let lockobj = new Object()
+    let mutable called = false
     /// <summary>Performs lazy calculations with multiple threads</summary>
     /// <returns>A result of calculations of type 'a</returns>
     interface ILazy<'a> with
         member this.Get() =
-            Monitor.Enter lockobj
-            try
-                match result with
-                | Some x -> x
-                | None ->                
-                    result <- Some(supplier())
-                    supplier()
-            finally
-                Monitor.Exit lockobj
+            if (not called) then
+                lock lockobj (fun() -> 
+                    if (not called) then
+                        result <- Some(supplier())
+                        called <- true  )
+            result.Value
 
 /// <summary>
 /// A multi-threaded lasy calculator with no lock guarantee
