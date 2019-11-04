@@ -32,4 +32,10 @@ let pagesDownloader url =
     let checkInitialPage = url |> downloadAndPrintAsync |> Async.RunSynchronously
     match checkInitialPage with
     | None -> [None]
-    | Some page -> checkInitialPage :: (downloadSubpages url)
+    | Some page -> checkInitialPage :: (downloadSubpages page)
+
+
+[<EntryPoint>]
+let main (args) =
+    pagesDownloader "https://www.macalester.edu/~abeverid/thrones.html" |> ignore
+    0
