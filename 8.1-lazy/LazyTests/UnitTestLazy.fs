@@ -29,17 +29,35 @@ let ``supplier should be called only once``() =
 
 [<Test>]
 let ``check race for multi-threaded calculator``() =
+    let mutable counter = 0
     let multiThreadedCalculator = LazyFactory.CreateMultiThreadedLazy(fun () -> new System.Object())
-    let sample = multiThreadedCalculator.Get ()
-    for i in 1..1000 do
-        ThreadPool.QueueUserWorkItem (fun obj -> (multiThreadedCalculator.Get ()).Equals sample |> should be True) |> ignore
+    let createWorkflow (calculator:ILazy<'a>) = 
+        async {
+            return calculator.Get()
+        }
+    let resultsList = 
+        Seq.init 100 (fun i -> multiThreadedCalculator)
+        |> Seq.map (fun calculator -> createWorkflow calculator)
+        |> Async.Parallel
+        |> Async.RunSynchronously
+        |> Array.toList
+    //counter |> should equal 1
+    List.fold (fun (acc:bool) (object) -> acc && (object.Equals (List.head resultsList))) true resultsList |> should be True  
 
 [<Test>]
 let ``check race for lock-free calculator``() =
     let lockFreeCalculator = LazyFactory.CreateLockFreeLazy(fun () -> new System.Object())
-    let sample = lockFreeCalculator.Get ()
-    for i in 1..1000 do
-        ThreadPool.QueueUserWorkItem (fun obj -> (lockFreeCalculator.Get ()).Equals sample |> should be True) |> ignore
+    let createWorkflow (calculator:ILazy<'a>) = 
+        async {
+            return calculator.Get()
+        }
+    let resultsList = 
+        Seq.init 100 (fun i -> lockFreeCalculator)
+        |> Seq.map (fun calculator -> createWorkflow calculator)
+        |> Async.Parallel
+        |> Async.RunSynchronously
+        |> Array.toList
+    List.fold (fun (acc:bool) (object:obj) -> acc && (object.Equals(List.head resultsList))) true resultsList |> should be True
 
 
 

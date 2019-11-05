@@ -32,16 +32,16 @@ type SingleThread<'a> (supplier : unit -> 'a) =
 type MultiThread<'a> (supplier : unit -> 'a) =
     let mutable result = None
     let lockobj = new Object()
-    let mutable called = false
+    let called = ref false
     /// <summary>Performs lazy calculations with multiple threads</summary>
     /// <returns>A result of calculations of type 'a</returns>
     interface ILazy<'a> with
         member this.Get() =
-            if (not called) then
+            if (not (Volatile.Read (called))) then
                 lock lockobj (fun() -> 
-                    if (not called) then
+                    if (not (Volatile.Read (called))) then
                         result <- Some(supplier())
-                        Volatile.Write (ref called, true)  )
+                        Volatile.Write (called, true)  )
             result.Value
 
 /// <summary>
