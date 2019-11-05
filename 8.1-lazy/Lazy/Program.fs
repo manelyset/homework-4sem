@@ -22,8 +22,8 @@ type SingleThread<'a> (supplier : unit -> 'a) =
             match result with
             | Some x -> x
             | None ->                
-                result <- Some(supplier())
-                supplier()
+                result <- Some(supplier())           
+                result.Value
 
 
 /// <summary>
@@ -41,7 +41,7 @@ type MultiThread<'a> (supplier : unit -> 'a) =
                 lock lockobj (fun() -> 
                     if (not called) then
                         result <- Some(supplier())
-                        called <- true  )
+                        Volatile.Write (ref called, true)  )
             result.Value
 
 /// <summary>
